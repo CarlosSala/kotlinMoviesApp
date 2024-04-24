@@ -4,12 +4,9 @@ import android.os.Build
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.moviesapp.R
 import com.example.moviesapp.databinding.ActivityDetailBinding
@@ -43,16 +40,16 @@ class DetailActivity : AppCompatActivity() {
             Glide
                 .with(this)
                 .load("https://image.tmdb.org/t/p/w185/${movie.poster_path}")
-                .into(binding.ivCourseDetail)
+                .into(binding.ivDetail)
             binding.tvSummary.text = movie.overview
             bindDetailInfo(binding.tvDetailInfo, movie)
         }
     }
 
-    private fun bindDetailInfo(detailInfo: TextView, movie: Movie) {
+    private fun bindDetailInfo(tvDetailInfo: TextView, movie: Movie) {
 
         // to work in only a textView playing with text
-        detailInfo.text = buildSpannedString {
+        tvDetailInfo.text = buildSpannedString {
 
             appendInfo(R.string.original_language, movie.original_language)
             appendInfo(R.string.original_title, movie.original_title)

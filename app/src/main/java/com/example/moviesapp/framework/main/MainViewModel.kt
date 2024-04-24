@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.moviesapp.data.repository.MovieRepository
 import com.example.moviesapp.domain.model.Movie
+import com.example.moviesapp.framework.common.ServerMovieDataSource
 import com.example.moviesapp.usecases.LoadPopularMoviesUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,12 +18,14 @@ class MainViewModel() : ViewModel() {
     )
 
     private val _progressVisible = MutableLiveData<Boolean>()
-
     val progressVisible: LiveData<Boolean> get() = _progressVisible
 
     private val _listPopularMovies = MutableLiveData<List<Movie>>()
-
     val listPopularMovies: LiveData<List<Movie>> get() = _listPopularMovies
+
+    private val _showMessage = MutableLiveData<String>()
+    val showMessage: LiveData<String> get() = _showMessage
+
 
     fun requestPopularMovies(region: String) {
 
@@ -31,5 +34,10 @@ class MainViewModel() : ViewModel() {
             _listPopularMovies.value = loadPopularMoviesUseCase.loadPopularMovies(region)
             _progressVisible.value = false
         }
+    }
+
+    fun onMovieClicked(movie: Movie) {
+
+        _showMessage.value = movie.title
     }
 }

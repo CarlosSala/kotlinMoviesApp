@@ -5,8 +5,8 @@ import com.bumptech.glide.Glide
 import com.example.moviesapp.databinding.ItemMovieBinding
 import com.example.moviesapp.domain.model.Movie
 
+// the ViewHolder class save the view that we pass for argument (binding root)
 class ViewHolder(private val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
-
 
     fun bind(movie: Movie) {
 

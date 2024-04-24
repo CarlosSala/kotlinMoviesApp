@@ -11,7 +11,7 @@
     <!-- Custom ImageView -->
 
     <com.example.moviesapp.framework.common.AspectRatioImageView
-        android:id="@+id/iv_course_detail"
+        android:id="@+id/iv_detail"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
@@ -42,7 +42,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_course_detail"
+        app:layout_constraintTop_toBottomOf="@id/iv_detail"
         tools:text="@string/todo" />
 
     <ScrollView

@@ -1,4 +1,4 @@
-package com.example.moviesapp.framework.main
+package com.example.moviesapp.framework.common
 
 import com.example.moviesapp.data.repository.network.MovieDbClient
 import com.example.moviesapp.data.repository.network.RemoteDataSource

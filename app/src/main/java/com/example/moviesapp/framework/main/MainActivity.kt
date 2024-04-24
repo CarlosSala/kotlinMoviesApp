@@ -88,6 +88,17 @@ class MainActivity : AppCompatActivity() {
             binding.pbMovies.isVisible = it
         }
 
+        // is implemented the interface
+        /*        object : MovieClickListener {
+                override fun onMovieClicked(movie: Movie) {
+                    Toast.makeText(
+                        this@CourseActivity,
+                        movie.title,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }*/
+
     }
 
     private fun permissionsStatus() {
@@ -145,6 +156,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingPermission")
     private fun requestPopularMovies() {
 
+        // request lastLocation to GPS
         fusedLocationProviderClient.lastLocation.addOnCompleteListener {
 
             if (it.result != null) {

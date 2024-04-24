@@ -13,10 +13,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MoviesApp"
+        android:theme="@style/Base.Theme.MoviesApp"
         tools:targetApi="31">
         <activity
             android:name=".framework.detail.DetailActivity"
+            android:parentActivityName=".framework.main.MainActivity"
+            android:theme="@style/Theme.MoviesApp.detailActivity"
             android:exported="false" />
         <activity
             android:name=".framework.main.MainActivity"

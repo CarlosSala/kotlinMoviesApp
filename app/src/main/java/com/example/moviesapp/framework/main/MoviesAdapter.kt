@@ -6,6 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.databinding.ItemMovieBinding
 import com.example.moviesapp.domain.model.Movie
 
+
+// this class receive a click event throw a interface
+interface MovieClickListener {
+
+    // instead use a lambda function
+    fun onMovieClicked(movie: Movie) // (movie) -> Unit
+}
+
 class MoviesAdapter(
     private var listMovies: List<Movie>,
     private val onMovieClicked: (Movie) -> Unit
@@ -25,16 +33,19 @@ class MoviesAdapter(
         return ViewHolder(binding)
     }
 
+    // this fun is called by each new item in the recycler view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val movie = listMovies[position]
         holder.bind(movie)
 
+        // when it has occurred a click, it is call onMovieClicked and it passed the movie
         holder.itemView.setOnClickListener {
             onMovieClicked(movie)
         }
     }
 
+    // quantity of items in the recycler view
     override fun getItemCount(): Int {
         return listMovies.size
     }
