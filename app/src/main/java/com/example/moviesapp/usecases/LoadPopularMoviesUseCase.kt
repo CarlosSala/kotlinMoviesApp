@@ -4,11 +4,14 @@ import com.example.moviesapp.data.repository.MovieRepository
 import com.example.moviesapp.domain.model.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class LoadPopularMoviesUseCase(private val movieRepository: MovieRepository) {
+class LoadPopularMoviesUseCase @Inject constructor (
+    private val movieRepository: MovieRepository
+) {
 
-    suspend fun loadPopularMovies(region: String): List<Movie> = withContext(Dispatchers.IO) {
+    suspend operator fun invoke(region: String): List<Movie> = withContext(Dispatchers.IO) {
 
-        movieRepository.getMovies(region)
+        movieRepository.getAllMoviesFromApi(region)
     }
 }

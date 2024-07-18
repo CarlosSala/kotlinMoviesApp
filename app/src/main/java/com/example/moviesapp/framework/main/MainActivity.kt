@@ -18,7 +18,9 @@ import com.example.moviesapp.domain.model.Movie
 import com.example.moviesapp.framework.detail.DetailActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     // a delegate create one instance of viewModel because is a singleton

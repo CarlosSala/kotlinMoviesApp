@@ -4,7 +4,7 @@ import com.example.moviesapp.data.repository.network.MovieDbClient
 import com.example.moviesapp.data.repository.network.RemoteDataSource
 import com.example.moviesapp.domain.model.Movie
 
-class ServerMovieDataSource : RemoteDataSource {
+class ServerMovieDataSource: RemoteDataSource {
 
     // this result it will be used by other who will be using this
     override suspend fun getPopularMovies(region: String): List<Movie> {

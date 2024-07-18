@@ -4,18 +4,22 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.moviesapp.data.repository.MovieRepository
 import com.example.moviesapp.domain.model.Movie
-import com.example.moviesapp.framework.common.ServerMovieDataSource
 import com.example.moviesapp.usecases.LoadPopularMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel() : ViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val loadPopularMoviesUseCase: LoadPopularMoviesUseCase
+) : ViewModel() {
 
+    /*
     private val loadPopularMoviesUseCase = LoadPopularMoviesUseCase(
         MovieRepository(ServerMovieDataSource())
-    )
+    )*/
 
     private val _progressVisible = MutableLiveData<Boolean>()
     val progressVisible: LiveData<Boolean> get() = _progressVisible
@@ -31,7 +35,7 @@ class MainViewModel() : ViewModel() {
 
         viewModelScope.launch(Dispatchers.Main) {
             _progressVisible.value = true
-            _listPopularMovies.value = loadPopularMoviesUseCase.loadPopularMovies(region)
+            _listPopularMovies.value = loadPopularMoviesUseCase(region)
             _progressVisible.value = false
         }
     }
