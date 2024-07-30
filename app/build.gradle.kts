@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
     id("kotlin-parcelize")
-   // id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -78,5 +77,4 @@ dependencies {
     //DaggerHilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation(kotlin("script-runtime"))
 }
