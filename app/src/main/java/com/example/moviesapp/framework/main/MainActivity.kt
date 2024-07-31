@@ -11,6 +11,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.PermissionChecker
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesapp.databinding.ActivityMainBinding
@@ -19,6 +20,7 @@ import com.example.moviesapp.framework.detail.DetailActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -81,13 +83,17 @@ class MainActivity : AppCompatActivity() {
 
         initRecyclerView()
 
-        viewModel.listPopularMovies.observe(this) {
-            moviesAdapter.setListMovies(it)
-            moviesAdapter.notifyDataSetChanged()
+        lifecycleScope.launch {
+            viewModel.listPopularMovies.collect {
+                moviesAdapter.setListMovies(it)
+                moviesAdapter.notifyDataSetChanged()
+            }
         }
 
-        viewModel.progressVisible.observe(this) {
-            binding.pbMovies.isVisible = it
+        lifecycleScope.launch {
+            viewModel.progressVisible.collect {
+                binding.pbMovies.isVisible = it
+            }
         }
 
         // is implemented the interface
@@ -129,7 +135,7 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        moviesAdapter = MoviesAdapter(emptyList()){
+        moviesAdapter = MoviesAdapter(emptyList()) {
 
             navigate(it)
         }
