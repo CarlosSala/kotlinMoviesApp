@@ -1,6 +1,6 @@
 # Movies App
 
-Aplicación maestro detalle que solicita y muestras peliculas populares a un API, en función de la ubicación geografica.
+Aplicación maestro detalle que solicita y muestras peliculas populares, en función de la ubicación geografica.
 
 ## Tabla de Contenidos
 
