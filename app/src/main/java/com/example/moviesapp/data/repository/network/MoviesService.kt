@@ -1,5 +1,6 @@
 package com.example.moviesapp.data.repository.network
 
+import com.example.moviesapp.BuildConfig
 import com.example.moviesapp.domain.model.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -14,7 +15,7 @@ class MoviesService @Inject constructor(
 
         val popularMovies = withContext(Dispatchers.IO) {
             apiClient.getPopularMovies(
-                "791a8c4d026076d931801fd25a0f9343",
+                BuildConfig.API_KEY_SAFE,
                 region
             )
         }
