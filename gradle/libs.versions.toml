@@ -1,33 +1,30 @@
 [versions]
-agp = "8.5.1"
-compiler = "4.16.0"
+agp = "8.6.0"
 converterGson = "2.11.0"
 datastorePreferences = "1.1.1"
-fragmentKtx = "1.8.2"
+fragmentKtx = "1.8.3"
 glide = "4.16.0"
-hilt = "2.51.1"
-hiltCompiler = "2.51.1"
+hilt = "2.52"
 kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
-kotlinTestJunit = "1.8.22"
-lifecycleViewmodelKtx = "2.8.4"
+kotlinTestJunit = "2.0.20"
+lifecycleViewmodelKtx = "2.8.5"
 material = "1.12.0"
-activity = "1.9.1"
+activity = "1.9.2"
 constraintlayout = "2.1.4"
-mockitoCore = "5.3.0"
-mockitoInline = "2.28.2"
+mockitoCore = "5.13.0"
+mockitoInline = "5.2.0"
 mockitoKotlin = "2.2.0"
 picasso = "2.71828"
 playServicesLocation = "21.3.0"
 ksp = "2.0.0-1.0.21"
 kotlinxCoroutinesAndroid = "1.8.1"
-mockk = "1.12.2"
+mockk = "1.13.12"
 coreTesting = "2.2.0"
-
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
@@ -35,11 +32,11 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -58,7 +55,6 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converte
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesAndroid" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

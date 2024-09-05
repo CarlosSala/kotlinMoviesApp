@@ -54,14 +54,13 @@ dependencies {
     androidTestImplementation(libs.mockito.android)
 
     testImplementation(libs.junit)
-    // Mockito core para pruebas unitarias
+    // Mockito core
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.mockito.inline)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockk)
     testImplementation(libs.core.testing)
     testImplementation(libs.kotlin.test.junit)
-
 
     // coroutines and permissions
     implementation(libs.androidx.fragment.ktx)
