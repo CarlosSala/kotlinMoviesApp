@@ -25,6 +25,13 @@ Este proyecto incluye las siguientes funcionalidades:
 - **Permisos de Sistema**: Solicitud y manejo de permisos dinámicos en la app.
 - **Arquitectura Limpia (Clean Architecture)**: Separación de capas para asegurar escalabilidad y mantenimiento.
 - **Patrón de Repositorio**: Separación de la lógica de datos de la lógica de presentación.
+## Screenshots
+
+Aquí algunas capturas de pantalla de la aplicación:
+
+![Pantalla Principal](./screenshots/main_screen.jpg)
+![Detalle de Película](./screenshots/detail_screen.jpg)
+![Solicitar ubicación](./screenshots/detail_screen.jpg)
 
 ## Instalación
 
