@@ -47,4 +47,11 @@ Este proyecto incluye las siguientes funcionalidades:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-proyecto.git
+   git clone https://github.com/CarlosSala/kotlinMoviesApp
+
+2. Obtén tu propia API Key registrándote en [The Movie Database (TMDb)](https://www.themoviedb.org/).
+3. Una vez obtengas la API Key, agrégala en un archivo llamado `apiKey.properties` en la raíz de tu proyecto.
+4. Dentro del archivo `apiKey.properties`, añade la siguiente línea:
+
+   ```bash
+   API_KEY=tu_api_key_aqui
