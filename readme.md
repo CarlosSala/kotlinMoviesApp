@@ -1,3 +1,4 @@
+
 # Movies App
 
 Aplicación maestro detalle que solicita y muestras peliculas populares, en función de la ubicación geografica.
@@ -7,6 +8,7 @@ Aplicación maestro detalle que solicita y muestras peliculas populares, en func
 - [Movies App](#movies-app)
     - [Tabla de Contenidos](#tabla-de-contenidos)
     - [Características](#características)
+    - [Screenshots](#screenshots)
     - [Instalación](#instalación)
 
 ## Características
@@ -25,13 +27,21 @@ Este proyecto incluye las siguientes funcionalidades:
 - **Permisos de Sistema**: Solicitud y manejo de permisos dinámicos en la app.
 - **Arquitectura Limpia (Clean Architecture)**: Separación de capas para asegurar escalabilidad y mantenimiento.
 - **Patrón de Repositorio**: Separación de la lógica de datos de la lógica de presentación.
+
+
 ## Screenshots
 
-Aquí algunas capturas de pantalla de la aplicación:
+<h3 align="center">Aquí algunas capturas de pantalla de la aplicación:</h3>
 
-![Pantalla Principal](./screenshots/main_screen.jpg)
-![Detalle de Película](./screenshots/detail_screen.jpg)
-![Solicitar ubicación](./screenshots/detail_screen.jpg)
+<table>
+<td width="50%">
+<div align="center">
+<img src="./screenshots/main_screen.jpg" width="200" alt="main_screen">
+<img src="./screenshots/detail_screen.jpg" width="200" alt="detail_screen">
+<img src="./screenshots/permissions.jpg" width="200" alt="permissions">
+</div>                                                                       
+</td>                                                         
+<table>                                                                                 
 
 ## Instalación
 
